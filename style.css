@@ -1,1 +1,61 @@
+body{
+    text-align: center;
+    align-items: center;
+}
+h1{
+    font-size: 50px;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+.carousel{
+    overflow: hidden;
+    max-width: 600px;
+    position: relative;
+    margin: 0 auto;
+}
+.carousel .carousel_item,
+.carousel_item--hidden{
+    display: none;
+}
 
+.carousel .carousel_item img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    
+}
+.carousel .carousel_item--visible{
+    display: block;
+    animation: fadeV 0.5s;
+}
+.carousel .carousel_action{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel .carousel_action button{
+    border-radius: 50px;
+    border: 0;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+}
+.carousel .carousel_action button#carousel_button--prev{
+ margin-left: 20px;
+}
+.carousel .carousel_action button#carousel_button--next{
+    margin-right: 20px;
+   }
+
+   @keyframes fadeV {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: opacity linear;
+    }
+   }
